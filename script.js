@@ -1,8 +1,8 @@
 "use strict";
 
 window.addEventListener("keydown", function (e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"`);
+    const audio = document.querySelector(`audio[data-key=${e.code}]`);
+    const key = document.querySelector(`.key[data-key="${e.code}"`);
     if (!audio) return;
     audio.currentTime = 0;
     audio.play();
@@ -12,7 +12,6 @@ window.addEventListener("keydown", function (e) {
 const removeTransition = function (e) {
     // skip it if it's not a transform
     if (e.propertyName !== "transform") return;
-    console.log(e.propertyName);
     this.classList.remove("playing");
 };
 
