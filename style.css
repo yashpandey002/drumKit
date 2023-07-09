@@ -50,3 +50,25 @@ kbd {
     letter-spacing: 0.1rem;
     color: #ffc600;
 }
+
+.desktop-use-only {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .desktop-use-only {
+        display: flex;
+    }
+}
